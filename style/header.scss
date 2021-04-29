@@ -1,0 +1,19 @@
+nav{
+    display: flex;
+    ul {
+        display: flex;
+        list-style-type: none;
+    }
+}
+  
+a {
+    text-decoration: none;
+    color: #333;
+    padding: 21px;
+    margin: 42px;
+    
+}
+
+a:hover {
+    border-bottom: 2px #fff solid;
+}
