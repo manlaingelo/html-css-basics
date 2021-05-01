@@ -47,17 +47,6 @@ h1 {
   margin: 10px 0;
 }
 
-.container {
-  margin: 0 auto;
-  overflow: auto;
-  max-width: 60vw;
-  height: 90vh;
-}
-
-.container p {
-  background-color: #fff;
-}
-
 .grid {
   margin: 30px auto;
   padding: 20px;
@@ -162,13 +151,7 @@ h1 {
 }
 
 .photos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  background-color: #fff;
 }
 
 .flex {
@@ -363,5 +346,39 @@ h1 {
   background-color: #f1463d;
   width: 180px;
   height: 394px;
+}
+
+.tab-container {
+  background-color: #fff;
+  padding: 3em;
+  min-height: 80vh;
+}
+
+.tab-container .tab-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab-container .tab-header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.tab-container .tab-header button {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  margin: 5px;
+}
+
+.tab-container .tab-body div {
+  display: none;
+}
+
+.tab-container .tab-body .active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

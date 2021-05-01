@@ -1,9 +1,12 @@
-nav{
+@mixin navigate {
     display: flex;
     ul {
         display: flex;
         list-style-type: none;
     }
+} 
+nav{
+    @include navigate(); 
 }
   
 a {
@@ -17,3 +20,4 @@ a {
 a:hover {
     border-bottom: 2px #fff solid;
 }
+

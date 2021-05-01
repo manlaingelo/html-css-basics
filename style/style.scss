@@ -1,5 +1,6 @@
 @import 'footer';
 @import 'header';
+
 $padding : 20px;
 $box-width: 90px;
 $box-height: 72px;
@@ -31,16 +32,6 @@ h1 {
     font-weight: 300;
     line-height: 1.2;
     margin: 10px 0;
-}
-
-.container{
-    margin: 0 auto;
-    overflow: auto;
-    max-width: 60vw;
-    height: 90vh;
-    p{
-        background-color: #fff;
-    }
 }
 
 .grid {
@@ -130,8 +121,11 @@ h1 {
 }
 // flex
 .photos {
-    @include flex-row();
+    // @include flex-row();
+    background-color: #fff;
 }
+
+
 .flex {
     margin: 30px auto;
     min-height: 85vh;
@@ -241,3 +235,29 @@ h1 {
         height: 394px;
     }
 }
+
+.tab-container {
+    background-color: #fff;
+    padding: 3em;
+    min-height: 80vh;
+    .tab-header {
+        @include navigate(); 
+    
+        button {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            margin: 5px;
+        }
+    }
+    .tab-body{
+        div {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    }
+}
+
+
