@@ -62,6 +62,29 @@
                     </div>
                 </div>
             </section>
+            <article>
+                <h1>Fetch request</h1>
+                <div class="click" onclick="getWeather()">Click me</div>
+                <pre class="fetch">waiting...</pre>
+            </article>
+            <article>
+                <h1>Ajax request</h1>
+                <div class="click" onclick="getWeatherAjax()">Click me</div>
+                <pre class="fetch">waiting...</pre>
+            </article>
+            <section>
+                <h1>Event bubbling</h1>
+                <div id="bubble1">
+                    <div id="bubble2">
+                        <div id="bubble3">
+                            <div id="click" class="click">Click event!!!</div>
+                        </div>
+                        <div id="bubble4">
+                            <div id="click2" class="click">Click event!!!</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div>
@@ -70,5 +93,6 @@
             </div>
         </footer>
         <script src="app.js"></script>
+        <script type="module" src="main.js"></script>
     </body>
 </html>

@@ -1,0 +1,114 @@
+html,
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #413d3d;
+}
+$padding: 20px;
+$box-width: 90px;
+$box-height: 72px;
+
+$colors: (
+  scarlet-dark: #f1463d,
+  blue-light: #2cc5cf,
+  beige-light: #d6b269,
+);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex {
+    height: 97vh;
+    margin: 10px;
+
+    background-color: #413d3d;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    .left {
+        gap: 20px;
+        @include flex-column();
+        flex: 2;
+        .box1 {
+        background-color: color(scarlet-dark);
+        flex: 3;
+        }
+        .box2 {
+        background-color: #f1f1f1;
+        flex: 3;
+        }
+    }
+    .right {
+        gap: 20px;
+        @include flex-column();
+
+        flex-wrap: wrap;
+        flex: 7;
+        .top {
+        @include flex-row();
+        gap: 20px;
+        flex: 3;
+        .box3 {
+            background-color: color(blue-light);
+            flex: 3;
+        }
+        .box4 {
+            background-color: color(beige-light);
+            flex: 4;
+        }
+        }
+        .bottom {
+            flex: 7;
+            gap: 20px;    
+            @include flex-row();
+            .bottom-left {
+                @include flex-column();
+                flex: 5;
+                gap: 20px;
+                
+                .bottom-left-top {
+                    @include flex-row();
+                    gap: 20px;
+                    flex: 2;
+                    .box5 {
+                        background-color: color(beige-light);
+                        flex: 2;
+                    }
+                    .box6 {
+                        flex: 3;
+                        background-color: #f1f1f1;
+                    }
+                }
+                .bottom-left-bottom {
+                    @include flex-row();
+                    gap: 20px;
+                    flex: 2;
+                        .box7 {
+                            background-color: color(scarlet-dark);
+                            flex: 3;
+                        }
+                        .box8 {
+                            background-color: color(blue-light);
+                            flex: 2;
+                        }
+                }
+            }
+            .bottom-right {
+                @include flex-row();
+                flex: 2;
+                .box9 {
+                    flex: 1;
+                    background-color: color(scarlet-dark);
+                }
+            }
+        }
+    }
+}

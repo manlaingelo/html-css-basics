@@ -1,64 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-		<link rel="stylesheet" href="style/style.css">
-        <title>Flexbox layout</title>
-    </head>
-    <body>
-        <header>
-        <nav>
-            <h1>Training<span>.</span></h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="grid.html">Grid</a></li>
-                <li><a href="flex.html">Flexbox</a></li>
-            </ul>
-        </nav>
-        </header>
-        <main>
-            <section>
-                <div class="flex">
-                    <!-- w,h dahin bichij vzeh responsive bolgo -->
-                    <div class="left">
-                        <div class="box1">1</div>
-                        <div class="box2">2</div>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style/flex.css" />
+    <title>Flexbox layout</title>
+  </head>
+  <body>
+    <div class="flex">
+      <!-- w,h dahin bichij vzeh responsive bolgo -->
+      <div class="left">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+      </div>
 
-                    <div class="right">
-                        
-                        <div class="top">
-                            <div class="box3">3</div>
-                            <div class="box4">4</div>
-                        </div>
-                     
-                        <div class="bottom">
-                            <div class="bottom-container">
-                                <div class="bottom-left-side">
-                                    <div class="box5">5</div>
-                                    <div class="box6">6</div>
-                                    <!-- salgaj vzeh -->
-                                    <div class="box7">7</div>
-                                    <div class="box8">8</div>
-                                </div>
-        
-                                <div class="bottom-right-side">
-                                    <div class="box9">9</div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div>
-                <h1>Training<span>.</span></h1>
-                <p>Copyright &copy; 2021</p>
+      <div class="right">
+        <div class="top">
+          <div class="box3">3</div>
+          <div class="box4">4</div>
+        </div>
+
+        <div class="bottom">
+            <div class="bottom-left">
+              <div class="bottom-left-top">
+                <div class="box5">5</div>
+                <div class="box6">6</div>
+              </div>
+              <div class="bottom-left-bottom">
+                <div class="box7">7</div>
+                <div class="box8">8</div>
+              </div>
             </div>
-        </footer>
-    </body>
+
+            <div class="bottom-right">
+              <div class="box9">9</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

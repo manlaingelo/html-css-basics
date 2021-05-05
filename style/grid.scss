@@ -1,0 +1,107 @@
+html, body {
+    font-family: sans-serif;
+	line-height: 1.5;
+    background-color: #413d3d;
+}
+
+$colors: (
+    scarlet-dark: #f1463d,
+    blue-light: #2cc5cf,
+    beige-light: #d6b269
+);
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+.grid-container {
+    height: 97vh;
+    margin: 10px;
+
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    grid-template-areas: "left right";
+    gap: 20px;  
+
+    .left {
+        grid-area: left;
+        display: grid;
+        gap: 20px;
+        .box1 {
+            background-color: color(scarlet-dark);
+        }
+        .box2 {
+            background-color: #f1f1f1;
+        }
+    }
+    .right {
+        grid-area: right;
+        display: grid;
+        grid-template-rows: 3fr 6fr;
+        grid-template-areas: "right-top" "right-bottom";
+        gap: 20px;
+        
+        .top {
+            grid-area: right-top;
+            display: grid;
+            grid-template-columns: 3fr 4fr;
+            grid-template-areas: "top-left top-right";
+            gap: 20px;
+
+            .box3 {
+                background-color: color(blue-light);
+            }
+            .box4 {
+                background-color: color(beige-light);
+            }
+        }
+        .bottom {
+            grid-area: right-bottom;
+            display: grid;
+            grid-template-columns: 5fr 2fr;
+            grid-template-areas: "bottom-left bottom-right";
+            gap: 20px;
+            
+            .bottom-right {
+                grid-area: bottom-right;
+                display: grid;
+                .box9 {
+                    display: grid;
+                    background-color: color(scarlet-dark);
+                }
+            }
+            .bottom-left { 
+                grid-area: bottom-left;
+                display: grid;
+                gap: 20px;
+
+                .bottom-left-top {
+                    display: grid;
+                    grid-template-columns: 2fr 3fr;
+                    grid-template-areas: "bottom-left-top-left bottom-left-top-right";
+                    gap: 20px;
+                    .box5 {
+                        background-color: color(beige-light);
+                        grid-area: bottom-left-top-left ;
+                    }
+                    .box6 {
+                        background-color: #f1f1f1;
+                        grid-area: bottom-left-top-right;
+                    }
+                }
+                .bottom-left-bottom {
+                    display: grid;
+                    grid-template-columns: 3fr 2fr;
+                    grid-template-areas: "bottom-left-bottom-left bottom-left-bottom-right";
+                    gap: 20px;
+                    .box7 {
+                        background-color: color(scarlet-dark);
+                    }
+                    .box8 {
+                        background-color: color(blue-light);
+                    }
+                }
+            }
+            
+        }
+    }
+}
