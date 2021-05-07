@@ -55,7 +55,7 @@ $colors: (
         .top {
         @include flex-row();
         gap: 20px;
-        flex: 3;
+        flex: 3 0 0;
         .box3 {
             background-color: color(blue-light);
             flex: 3;

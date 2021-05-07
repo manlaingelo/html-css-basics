@@ -73,8 +73,8 @@ body {
           flex-direction: row;
   gap: 20px;
   -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+      -ms-flex: 3 0 0px;
+          flex: 3 0 0;
 }
 
 .flex .right .top .box3 {

@@ -69,16 +69,17 @@ function getWeatherAjax() {
 
 // ############################################ jishee beldeh ############################################
 // module --
+
 // hoisting, scope --
 // let var jishee --
 // huwisagchiin sanah oig shalgah --
 // call, apply, --
-//  event bubling 
+// event bubling --
 // ajax fetch ylgaa jishee --
-// basic concepts
 
 
-// Scoping && let var ylgaa
+
+//  let var ylgaa
 
 // var x = 10;
 // let y=100;
@@ -89,25 +90,52 @@ function getWeatherAjax() {
 //     let y=200;
 //     console.log("Scope 2:", x, y);
 // }
-
+// for(var x=1; x<5; x++){
+//     console.log(x);
+// }
+// for(let y=1; y<10; y++){
+//     console.log(y);
+// }
 // console.log("Scope 3:", x, y);
 
+// // const c="aaa";
 
-// // Hoisting
-// var a;
+// // c="bbb";
+// // mutable, inmutable
 
-// function exampleHoist(){
-//     a = 10;
-//     console.log("Inside function",a);
-// }
-// exampleHoist();
+// a='Test';
+// b='Hello';
+
+// var arr=b.split('');
+
+// arr.forEach(el => {
+//     if(['a','e','i','o','u'].includes(el)){
+//         a=a+el;
+//     }
+// });
+// console.log(a);    
+
+//Scope Hoisting
+// var s = "Outside function";
+
+// function transform() {
   
-// console.log("Outside function",a); 
+//   if (false) {
+//     var s = "Inside function";
+//   }
+//   console.log(s);
+// }
+
+// // Log the global and local variable
+// console.log(s);
+// transform();
+// console.log(s);
 
 
-// // huwisagchiin sanah oig shalgah
+// // huwisagchiin sanah oig shalgah, zaadag bolgoh
 
 // let temp=255;
+
 // let temp2=temp;
 
 // console.log("Memory 1:",temp,temp2); // 255 255
@@ -117,14 +145,14 @@ function getWeatherAjax() {
 // console.log("Memory 3:",temp,temp2); // 265 260
 
 // // call bind apply
-// let obj = {
-//     name: 'Bi bol object',
-//     hewleh: function(neg, hoyr, guraw){
-//         console.log(this, "1:"+neg, "2:"+hoyr, "3:"+guraw);
-//     }
-// }
+let obj = {
+    name: 'Bi bol object',
+    hewleh: function(neg, hoyr, guraw){
+        console.log(this, "1:"+neg, "2:"+hoyr, "3:"+guraw);
+    }
+}
 
-// obj.hewleh("neg", "hoyr", "guraw");
+obj.hewleh("neg", "hoyr", "guraw");
 // // bind 
 // let bindObj= {
 //     name: 'Bi bol bind object'
@@ -133,19 +161,19 @@ function getWeatherAjax() {
 // bindHewleh("neg", "hoyr", "guraw");
 
 // // call
-// let callObj= {
-//     name: 'Bi bol call object'
-// }
-// obj.hewleh.call(callObj, 1,2,3);
+let callObj= {
+    name: 'Bi bol call object'
+}
+obj.hewleh.call(callObj, 1,2,3);
 
 // // apply 
-// let applyObj= {
-//     name: 'Bi bol apply object'
-// }
-// let arr = [1,2,3];
-// obj.hewleh.apply(applyObj, arr);
+let applyObj= {
+    name: 'Bi bol apply object'
+}
+let arr = [1,2,3];
+obj.hewleh.apply(applyObj, arr);
 
-// obj.hewleh(1,2,3);
+obj.hewleh(1,2,3);
 
 //event bubbling
 
